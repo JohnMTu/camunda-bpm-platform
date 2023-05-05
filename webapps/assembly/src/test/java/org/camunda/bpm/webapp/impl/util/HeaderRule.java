@@ -16,26 +16,29 @@
  */
 package org.camunda.bpm.webapp.impl.util;
 
-import org.eclipse.jetty.server.Server;
-import org.eclipse.jetty.webapp.WebAppContext;
-import org.junit.rules.ExternalResource;
-
 import java.io.IOException;
 import java.net.HttpURLConnection;
 import java.net.ProtocolException;
 import java.net.URL;
+import java.util.concurrent.ThreadLocalRandom;
+import org.eclipse.jetty.server.Server;
+import org.eclipse.jetty.webapp.WebAppContext;
+import org.junit.rules.ExternalResource;
 
 /**
  * @author Tassilo Weidner
  */
 public class HeaderRule extends ExternalResource {
 
-  protected static final int SERVER_PORT = 8085;
+  protected static final int MIN_SERVER_PORT = 11000;
+  protected static final int MAX_SERVER_PORT = 19000;
+  protected static final int SERVER_PORT = getRandomServerPort();
 
   protected Server server = new Server(SERVER_PORT);
   protected WebAppContext webAppContext = new WebAppContext();
   protected HttpURLConnection connection = null;
 
+  @Override
   protected void before() {
     try {
       server.stop();
@@ -44,12 +47,17 @@ public class HeaderRule extends ExternalResource {
     }
   }
 
+  @Override
   protected void after() {
     try {
       server.stop();
     } catch (Exception e) {
       throw new RuntimeException(e);
     }
+  }
+
+  protected static int getRandomServerPort() {
+    return ThreadLocalRandom.current().nextInt(MIN_SERVER_PORT, MAX_SERVER_PORT + 1);
   }
 
   public void startServer(String webDescriptor, String scope) {
@@ -147,11 +155,11 @@ public class HeaderRule extends ExternalResource {
       throw new RuntimeException(e);
     }
   }
-  
+
   public String getSessionCookieRegex(String path, String sameSite, boolean secure) {
     return getSessionCookieRegex(path, "JSESSIONID", sameSite, secure);
   }
-  
+
   public String getSessionCookieRegex(String path, String cookieName, String sameSite, boolean secure) {
     StringBuilder regex = new StringBuilder(cookieName + "=.*;\\W*Path=/");
     if (path != null) {
