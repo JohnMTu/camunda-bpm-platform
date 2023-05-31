@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.camunda.bpm.engine.spring.impl.components.registry;
+package org.camunda.bpm.engine.spring.components.registry;
 
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.impl.bpmn.behavior.ReceiveTaskActivityBehavior;
@@ -74,7 +74,7 @@ public class ActivitiStateHandlerRegistry extends ReceiveTaskActivityBehavior im
   /**
    * used at runtime to register state handlers as they are registered with the spring context
    *
-   * @param registration the {@link org.camunda.bpm.engine.spring.impl.components.registry.spring.components.registry.ActivitiStateHandlerRegistration}
+   * @param registration the {@link org.camunda.bpm.engine.spring.components.registry.spring.components.registry.ActivitiStateHandlerRegistration}
    */
   public void registerActivitiStateHandler(
       ActivitiStateHandlerRegistration registration) {
@@ -85,7 +85,7 @@ public class ActivitiStateHandlerRegistry extends ReceiveTaskActivityBehavior im
 
   /**
    * this is responsible for looking up components in the registry and returning the appropriate handler based
-   * on specificity of the {@link org.camunda.bpm.engine.spring.impl.components.registry.spring.components.registry.ActivitiStateHandlerRegistration}
+   * on specificity of the {@link org.camunda.bpm.engine.spring.components.registry.spring.components.registry.ActivitiStateHandlerRegistration}
    *
    * @param processName the process name to look for (optional)
    * @param stateName   the state name to look for (not optional)
@@ -117,7 +117,7 @@ public class ActivitiStateHandlerRegistry extends ReceiveTaskActivityBehavior im
    *
    * @param processName the name of the process
    * @param stateName   the name of the state
-   * @return an unambiguous {@link org.camunda.bpm.engine.spring.impl.components.registry.spring.components.registry.ActivitiStateHandlerRegistry} or null
+   * @return an unambiguous {@link org.camunda.bpm.engine.spring.components.registry.spring.components.registry.ActivitiStateHandlerRegistry} or null
    */
   public ActivitiStateHandlerRegistration findRegistrationForProcessAndState(String processName, String stateName) {
 

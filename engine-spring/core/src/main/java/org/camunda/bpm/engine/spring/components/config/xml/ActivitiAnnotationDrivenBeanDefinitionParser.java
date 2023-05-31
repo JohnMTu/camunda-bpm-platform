@@ -16,9 +16,9 @@
 package org.camunda.bpm.engine.spring.components.config.xml;
 
 
+import org.camunda.bpm.engine.spring.components.ActivitiContextUtils;
+import org.camunda.bpm.engine.spring.components.aop.ProcessStartAnnotationBeanPostProcessor;
 import org.camunda.bpm.engine.spring.components.scope.ProcessScope;
-import org.camunda.bpm.engine.spring.impl.ActivitiContextUtils;
-import org.camunda.bpm.engine.spring.impl.components.aop.ProcessStartAnnotationBeanPostProcessor;
 import org.springframework.beans.factory.config.BeanDefinition;
 import org.springframework.beans.factory.config.BeanDefinitionHolder;
 import org.springframework.beans.factory.config.RuntimeBeanReference;
@@ -35,7 +35,7 @@ import org.w3c.dom.Element;
  * registers support for handling the annotations in the org.camunda.bpm.engine.annotations package.
  * <p/>
  * The first major component is the state handlers. For this to work, a BeanFactoryPostProcessor is registered which in turn registers a
- * {@link org.camunda.bpm.engine.spring.impl.components.registry.spring.components.registry.ActivitiStateHandlerRegistry} if none exists.
+ * {@link org.camunda.bpm.engine.spring.components.registry.spring.components.registry.ActivitiStateHandlerRegistry} if none exists.
  *
  * @author Josh Long
  * @since 5.3

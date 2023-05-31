@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.camunda.bpm.engine.spring.impl.components.aop;
+package org.camunda.bpm.engine.spring.components.aop;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;
@@ -24,8 +24,8 @@ import org.camunda.bpm.engine.spring.annotations.ProcessId;
 import org.camunda.bpm.engine.spring.annotations.ProcessVariable;
 import org.camunda.bpm.engine.spring.annotations.ProcessVariables;
 import org.camunda.bpm.engine.spring.annotations.State;
-import org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration;
-import org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistry;
+import org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration;
+import org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistry;
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanClassLoaderAware;

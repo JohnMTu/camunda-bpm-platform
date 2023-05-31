@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.camunda.bpm.engine.spring.impl.components.aop;
+package org.camunda.bpm.engine.spring.components.aop;
 
 import java.lang.annotation.Annotation;
 import java.lang.reflect.Method;

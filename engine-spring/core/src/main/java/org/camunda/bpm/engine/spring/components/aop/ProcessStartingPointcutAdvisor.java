@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package org.camunda.bpm.engine.spring.impl.components.aop;
+package org.camunda.bpm.engine.spring.components.aop;
 
 import java.io.Serializable;
 import java.lang.annotation.Annotation;
@@ -25,7 +25,7 @@ import org.aopalliance.aop.Advice;
 import org.aopalliance.intercept.MethodInterceptor;
 import org.camunda.bpm.engine.ProcessEngine;
 import org.camunda.bpm.engine.spring.annotations.StartProcess;
-import org.camunda.bpm.engine.spring.impl.components.aop.util.MetaAnnotationMatchingPointcut;
+import org.camunda.bpm.engine.spring.components.aop.util.MetaAnnotationMatchingPointcut;
 import org.springframework.aop.Pointcut;
 import org.springframework.aop.PointcutAdvisor;
 import org.springframework.aop.support.ComposablePointcut;

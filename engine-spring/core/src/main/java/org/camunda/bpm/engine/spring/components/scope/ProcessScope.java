@@ -27,7 +27,7 @@ import org.camunda.bpm.engine.RuntimeService;
 import org.camunda.bpm.engine.impl.context.Context;
 import org.camunda.bpm.engine.impl.persistence.entity.ExecutionEntity;
 import org.camunda.bpm.engine.runtime.ProcessInstance;
-import org.camunda.bpm.engine.spring.impl.components.aop.util.Scopifier;
+import org.camunda.bpm.engine.spring.components.aop.util.Scopifier;
 import org.camunda.commons.utils.StringUtil;
 import org.springframework.aop.framework.ProxyFactory;
 import org.springframework.aop.scope.ScopedObject;

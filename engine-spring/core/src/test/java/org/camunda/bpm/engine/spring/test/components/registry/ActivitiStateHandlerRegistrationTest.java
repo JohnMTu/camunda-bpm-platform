@@ -22,7 +22,7 @@ import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.Map;
 
-import org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration;
+import org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration;
 import org.junit.Test;
 
 /**
@@ -44,7 +44,7 @@ public class ActivitiStateHandlerRegistrationTest {
     ActivitiStateHandlerRegistration registration = new ActivitiStateHandlerRegistration(processVariablesExpected,
         handlerMethod, handler, stateName, beanName,
         processVariablesIndex, processIdIndex, processName);
-    assertEquals("org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
+    assertEquals("org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
         + "processVariablesExpected={34=testValue}, "
         + "handlerMethod=public void org.camunda.bpm.engine.spring.test.components.registry.ActivitiStateHandlerRegistrationTest.shouldHaveDetailledStringRepresentation() throws java.lang.Exception, "
         + "handler=org.camunda.bpm.engine.spring.test.components.registry.ActivitiStateHandlerRegistrationTest$1@" + Integer.toHexString(handler.hashCode()) + ", "
@@ -68,7 +68,7 @@ public class ActivitiStateHandlerRegistrationTest {
     ActivitiStateHandlerRegistration registration = new ActivitiStateHandlerRegistration(processVariablesExpected,
         handlerMethod, handler, stateName, beanName,
         processVariablesIndex, processIdIndex, processName);
-    assertEquals("org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
+    assertEquals("org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
         + "processVariablesExpected={34=testValue}, "
         + "handlerMethod=null, "
         + "handler=null, "
