@@ -22,7 +22,7 @@ import java.lang.reflect.Method;
 import java.util.Collections;
 import java.util.Map;
 
-import org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration;
+import org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration;
 import org.junit.Test;
 
 /**
@@ -41,10 +41,10 @@ public class ActivitiStateHandlerRegistrationTest {
     int processVariablesIndex = 4;
     int processIdIndex = 2;
     String processName = "testProcess";
-    ActivitiStateHandlerRegistration registration = new ActivitiStateHandlerRegistration(processVariablesExpected, 
+    ActivitiStateHandlerRegistration registration = new ActivitiStateHandlerRegistration(processVariablesExpected,
         handlerMethod, handler, stateName, beanName,
         processVariablesIndex, processIdIndex, processName);
-    assertEquals("org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
+    assertEquals("org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
         + "processVariablesExpected={34=testValue}, "
         + "handlerMethod=public void org.camunda.bpm.engine.spring.test.components.registry.ActivitiStateHandlerRegistrationTest.shouldHaveDetailledStringRepresentation() throws java.lang.Exception, "
         + "handler=org.camunda.bpm.engine.spring.test.components.registry.ActivitiStateHandlerRegistrationTest$1@" + Integer.toHexString(handler.hashCode()) + ", "
@@ -54,7 +54,7 @@ public class ActivitiStateHandlerRegistrationTest {
         + "processIdIndex=2, "
         + "processName=testProcess]", registration.toString());
   }
-  
+
   @Test
   public void shouldHaveDetailledStringRepresentationWithNullValues() throws Exception {
     Map<Integer, String> processVariablesExpected = Collections.singletonMap(34, "testValue");
@@ -65,10 +65,10 @@ public class ActivitiStateHandlerRegistrationTest {
     int processVariablesIndex = 4;
     int processIdIndex = 2;
     String processName = "testProcess";
-    ActivitiStateHandlerRegistration registration = new ActivitiStateHandlerRegistration(processVariablesExpected, 
+    ActivitiStateHandlerRegistration registration = new ActivitiStateHandlerRegistration(processVariablesExpected,
         handlerMethod, handler, stateName, beanName,
         processVariablesIndex, processIdIndex, processName);
-    assertEquals("org.camunda.bpm.engine.spring.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
+    assertEquals("org.camunda.bpm.engine.spring.impl.components.registry.ActivitiStateHandlerRegistration@" + Integer.toHexString(registration.hashCode()) + "["
         + "processVariablesExpected={34=testValue}, "
         + "handlerMethod=null, "
         + "handler=null, "
